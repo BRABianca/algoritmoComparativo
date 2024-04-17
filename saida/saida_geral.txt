@@ -1,0 +1,7 @@
+Localidade: avalon
+Valores que não têm par correspondente:
+T3ST3
+
+Localidade: bocaja
+Valores que não têm par correspondente:
+T3ST2
