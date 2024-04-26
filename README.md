@@ -1,59 +1,42 @@
-# algoritmoComparativo
-A ideia principal é: Um algoritmo de comparação, irá receber valores alfanuméricos em duas entradas (não poderá ter limite de valores para entrada, parará de ler quando eu der **enter** novamente) e retornará os valores que não tiverem par. 
+# RDA & HANDLE Comparador
 
-O código procura códigos que não tenham seu par na outra pasta. Ele funciona da seguinte maneira:
+Este é um programa desenvolvido para comparar arquivos de duas pastas diferentes, identificar valores não pareados entre eles e gerar um arquivo de saída com os resultados da comparação.
 
-**1. Leitura dos arquivos:**
-- O código lê os arquivos de cada pasta, um por um.
-- Para cada arquivo, ele extrai os códigos e os armazena em uma lista.
+## Funcionalidades
 
-**2. Comparação dos códigos:**
-- O código compara os códigos do grupo 1 com os códigos do grupo 2.
-- Para cada código no grupo 1, ele verifica se existe um código correspondente no grupo 2.
-- Se não existir um código correspondente, o código do grupo 1 é considerado um "valor não par".
+- **Seleção de Pastas:** Permite ao usuário selecionar duas pastas, uma contendo arquivos do tipo RDA e outra contendo arquivos do tipo HANDLE.
+- **Comparação de Arquivos:** Compara os arquivos de ambas as pastas, identificando valores que não possuem correspondência entre elas.
+- **Geração de Arquivo de Saída:** Cria um arquivo de saída contendo as localidades e os valores não pareados encontrados durante a comparação.
 
-**3. Gravação dos resultados:**
-- O código grava os valores não pares em um arquivo de saída na pasta `saida`.
-- O nome do arquivo de saída é formado pelo nome do arquivo original, com o sufixo `_saida`.
+## Requisitos
 
-**Exemplo:**
-- Se o código encontrar um código "1234" no grupo 1 e não encontrar um código "1234" no grupo 2, o código "1234" será gravado no arquivo de saída `saida_arquivo1.txt`.
+- Python 3.x
+- Bibliotecas Python: `tkinter`
 
-**Observações:**
-- O código considera que os códigos em cada arquivo são únicos.
-- O código não verifica se os códigos são válidos.
+## Instalação e Execução
 
-# algoritmoSimplificado
-1. Início
-2. Defina uma função para ler os números de um arquivo dado o caminho do arquivo.
-3. Defina uma função para extrair a localidade a partir do nome do arquivo.
-4. Defina uma função para comparar duas localidades, ignorando maiúsculas e minúsculas e um número específico de caracteres no final.
-5. Defina uma função para encontrar valores que não possuem pares correspondentes em dois conjuntos de valores.
-6. Defina os diretórios das pastas contendo os arquivos do grupo 1 e do grupo 2.
-7. Liste os arquivos nas pastas do grupo 1 e do grupo 2.
-8. Defina o diretório para o arquivo de saída.
-9. Se o diretório do arquivo de saída não existir, crie-o.
-10. Crie um conjunto para armazenar os nomes dos arquivos já processados.
-11. Crie um dicionário para armazenar os valores não pares por localidade.
-12. Para cada arquivo no grupo 1:
-    13. Leia os números do arquivo.
-    14. Extraia a localidade do nome do arquivo.
-    15. Encontre o arquivo correspondente no grupo 2.
-    16. Se nenhum arquivo correspondente for encontrado, imprima uma mensagem e continue com o próximo arquivo.
-    17. Leia os números do arquivo correspondente no grupo 2.
-    18. Encontre os valores que não possuem pares correspondentes entre os dois grupos.
-    19. Adicione os valores não pares ao dicionário, usando a localidade como chave.
-13. Para cada arquivo no grupo 2 que não foi processado:
-    20. Extraia a localidade do nome do arquivo.
-    21. Encontre o arquivo correspondente no grupo 1.
-    22. Se nenhum arquivo correspondente for encontrado, imprima uma mensagem e continue com o próximo arquivo.
-    23. Leia os números do arquivo correspondente no grupo 1.
-    24. Encontre os valores que não possuem pares correspondentes entre os dois grupos.
-    25. Adicione os valores não pares ao dicionário, usando a localidade como chave.
-14. Escreva os resultados no arquivo de saída.
-15. Para cada localidade e seus valores não pares:
-    26. Escreva a localidade no arquivo de saída.
-    27. Escreva os valores não pares no arquivo de saída.
-16. Fim
+1. Faça o download ou clone este repositório em sua máquina local.
+2. Certifique-se de ter o Python instalado em seu sistema.
+3. Abra um terminal e navegue até o diretório raiz do projeto.
+4. Execute o seguinte comando para instalar as dependências necessárias:
 
+bash
 
+Copy code
+
+`pip install interfaceGrafica`
+
+5. Após a instalação das dependências, execute o arquivo `interfaceGrafica.py` para iniciar a interface gráfica.
+6. Na interface gráfica, selecione as pastas contendo os arquivos RDA e HANDLE.
+7. Clique no botão "Enter" para iniciar a comparação.
+8. O arquivo de saída será gerado na pasta de instalação do programa.
+
+## Estrutura do Projeto
+
+- `interfaceGrafica.py`: Contém a definição da interface gráfica e a lógica para interagir com o usuário.
+- `scriptPrincipal.py`: Contém a lógica principal do programa, incluindo funções para ler arquivos, extrair localidades, comparar valores e gerar o arquivo de saída.
+- `README.md`: Este arquivo, contendo informações sobre o projeto, requisitos, instalação e execução.
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo LICENSE para obter mais detalhes.
