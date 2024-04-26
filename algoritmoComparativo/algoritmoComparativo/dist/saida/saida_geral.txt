@@ -1,0 +1,5 @@
+Localidade: ponta_pora
+Valores que não têm par correspondente:
+8DDB8
+8DA8F
+8E402
